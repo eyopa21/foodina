@@ -7,6 +7,7 @@
 
       <NuxtPage />
     </NuxtLayout>
+
   </div>
 </template>
 

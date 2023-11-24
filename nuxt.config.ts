@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     ],
   },
   modules: ["@nuxt/ui", '@nuxt/content', '@nuxtjs/apollo', "@nuxt/image", 'nuxt-icon'],
+
+
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
