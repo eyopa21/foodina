@@ -1,8 +1,5 @@
 <script setup>
-import testimonials from "./components/sections/testimonials.vue";
-components: {
-  testimonials
-},
+
 </script>
 
 <template>
