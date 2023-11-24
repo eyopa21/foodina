@@ -26,7 +26,7 @@
                                 don’t need
                                 a diet because we provide healthy and delicious food for you!.</p>
                             <div class="flex flex-wrap  items-center justify-center lg:justify-normal gap-5 mt-10">
-                                <VueButton name="Order now" type="button" />
+                                <VueButton name="Order now" type="button" className="py-5 " />
                                 <a href="javascript:void(0)"
                                     class="group text-primary transition-all duration-1000 hover:scale-[105%] flex items-center">
                                     <span
@@ -70,7 +70,7 @@
                     <span class="absolute top-0 start-0 text-3xl -rotate-[40deg]">🔥</span>
                     <span
                         class="absolute top-0 end-[10%] -rotate-12 h-14 w-14 inline-flex items-center justify-center bg-yellow-400 text-white rounded-lg">
-                        <i data-lucide="clock-3" class="h-6 w-6"></i>
+                        <Icon name="i-heroicons-clock" class="h-6 w-6" />
                     </span>
                     <span
                         class="absolute top-1/4 end-0 -rotate-12 h-4 w-4 inline-flex items-center justify-center bg-primary text-white rounded"></span>
