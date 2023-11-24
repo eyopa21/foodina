@@ -1,6 +1,7 @@
 <template>
-    <section class="lg:py-16 py-6 relative">
+    <section class="lg:py-0 py-6 relative ">
         <div class="absolute inset-0 blur-[60px] bg-gradient-to-l from-orange-600/20 via-orange-600/5 to-orange-600/0">
+
         </div>
         <div class="container relative">
             <div class="grid lg:grid-cols-2 items-center">
@@ -17,23 +18,22 @@
                                 <span class="inline-flex relative">
                                     <span>Delicious</span>
                                     <img src="data:image/png;base64,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"
-                                        class="absolute -z-10 h-full w-full lg:flex hidden">
+                                        class="absolute z-10 h-full w-full lg:flex hidden">
                                 </span>
                                 <span class="text-primary">Food</span> And Quick Service
                             </h1>
                             <p class="text-lg text-default-700 font-medium mb-8 md:max-w-md lg:mx-0 mx-auto">Imagine you
                                 don’t need
                                 a diet because we provide healthy and delicious food for you!.</p>
-                            <div class="flex flex-wrap items-center justify-center lg:justify-normal gap-5 mt-10">
+                            <div class="flex flex-wrap  items-center justify-center lg:justify-normal gap-5 mt-10">
+                                <VueButton name="Order now" type="button" />
                                 <a href="javascript:void(0)"
-                                    class="py-5 px-10 font-medium text-white bg-primary rounded-full hover:bg-primary-500 transition-all">Order
-                                    Now</a>
-                                <a href="javascript:void(0)" class="text-primary flex items-center">
+                                    class="group text-primary transition-all duration-1000 hover:scale-[105%] flex items-center">
                                     <span
                                         class="h-14 w-14 rounded-full border-2 border-e-transparent border-yellow-400 flex items-center justify-center me-2">
-                                        <i data-lucide="play" class="h-6 w-6 fill-primary"></i>
+                                        <Icon name="i-heroicons-play-20-solid" class="h-6 w-6 fill-primary"></Icon>
                                     </span>
-                                    <span class="font-semibold">How to Order</span>
+                                    <span class="font-semibold group-hover:border-b border-primary">How to Order</span>
                                 </a>
                             </div>
                             <div class="mt-14">
@@ -54,9 +54,11 @@
                                     </div>
                                     <div>
                                         <h1 class="text-base font-medium text-default-800">Our Happy Customer</h1>
-                                        <p class="text-base text-default-900"><i data-lucide="star"
-                                                class="h-4 w-4 inline text-yellow-400 fill-yellow-400"></i> 4.7 <span
-                                                class="text-default-500 text-sm">(13.7k Reviews)</span></p>
+                                        <p class="text-base text-default-900">
+                                            <Icon name="i-heroicons-star-solid"
+                                                class="h-4 w-4 inline text-yellow-400 fill-yellow-400" /> 4.7 <span
+                                                class="text-default-500 text-sm">(13.7k Reviews)</span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -81,11 +83,9 @@
                                 <h6 class="text-sm font-medium text-default-900">Jakob Culhane</h6>
                                 <p class="text-[10px] font-medium text-default-900">Healthy and Delicious Food</p>
                                 <span class="inline-flex gap-0.5">
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-default-200 fill-default-200"></i>
+                                    <Icon v-for="i in 3" :key="i" name="i-heroicons-star-solid"
+                                        class="h-3 w-3 text-yellow-400 fill-yellow-400" />
+
                                 </span>
                             </div>
                         </div>
@@ -100,11 +100,13 @@
                             <div class="">
                                 <h6 class="text-sm font-medium text-default-900">MCD Veg Burger</h6>
                                 <span class="inline-flex gap-0.5">
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-yellow-400 fill-yellow-400"></i>
-                                    <i data-lucide="star" class="h-3 w-3 text-default-200 fill-default-200"></i>
+                                    <Icon v-for="i in 3" :key="i" name="i-heroicons-star-solid"
+                                        class="h-3 w-3 text-yellow-400 fill-yellow-400" />
+                                    <Icon v-for="i in 2" :key="i" name="i-heroicons-star"
+                                        class="h-3 w-3 text-yellow-400 fill-yellow-400" />
+
+
+
                                 </span>
                                 <h6 class="text-sm font-medium text-default-900"><span class="text-sm text-primary">$</span>
                                     8.14</h6>
@@ -117,4 +119,5 @@
                 </div><!-- end grid-col -->
             </div><!-- end grid -->
         </div><!-- end container -->
-</section></template>
+    </section>
+</template>
