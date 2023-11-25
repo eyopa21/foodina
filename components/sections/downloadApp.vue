@@ -33,9 +33,8 @@
                             your
                             food
                             delivered quickly.</p>
-                        <a href="javascript:void(0)"
-                            class="inline-flex py-4 px-10 font-medium text-white bg-primary rounded-full hover:bg-primary-500 transition-all">Get
-                            started</a>
+
+                        <VueButton name="Get started" type="button" className="py-4" />
                     </div>
                     <div class="relative pt-20 px-20">
                         <span class="absolute end-10 bottom-28 text-3xl -rotate-45">🔥</span>

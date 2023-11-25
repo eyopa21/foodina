@@ -1,6 +1,6 @@
 <template>
-    <section class="lg:py-16 py-6">
-        <div class="container">
+    <section class="lg:py-16 py-6 m-8">
+        <div class="container p-8 md:p-32 border-2 border-primary rounded-xl ">
             <div class="grid lg:grid-cols-2 grid-cols-1 items-center gap-20">
                 <div>
                     <div class="relative">
@@ -50,27 +50,23 @@
                                                 <h6 class="text-base/none font-medium text-default-900 mb-2">Madelyn
                                                     Baptista</h6>
                                                 <div class="flex gap-1.5">
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
+                                                    <button v-for="i in 5" :key="i">
+                                                        <Icon name="i-heroicons-star-solid"
+                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></Icon>
+                                                    </button>
+
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="relative px-12">
                                             <div class="absolute -top-5 start-0">
-                                                <i data-lucide="quote"
-                                                    class="h-8 w-8 text-primary fill-primary rotate-180"></i>
+                                                <Icon name="i-material-symbols-format-quote"
+                                                    class="h-8 w-8 text-primary fill-primary rotate-180" />
                                             </div>
                                             <div class="absolute -bottom-5 end-0">
-                                                <i data-lucide="quote" class="h-8 w-8 text-primary fill-primary"></i>
+                                                <Icon name="i-material-symbols-format-quote"
+                                                    class="h-8 w-8 text-primary fill-primary" />
                                             </div>
                                             <p class="text-base text-default-400 font-medium">Food is the best. Besides the
                                                 many and
@@ -80,117 +76,7 @@
                                         </div>
                                     </div>
                                 </div><!-- end slide -->
-                                <div class="swiper-slide">
-                                    <div class="relative cursor-pointer">
-                                        <div class="flex items-center gap-3 mb-12">
-                                            <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full">
-                                            <div class="">
-                                                <h6 class="text-base/none font-medium text-default-900 mb-2">Marc Y. Sellers
-                                                </h6>
-                                                <div class="flex gap-1.5">
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="relative px-12">
-                                            <div class="absolute -top-5 start-0">
-                                                <i data-lucide="quote"
-                                                    class="h-8 w-8 text-primary fill-primary rotate-180"></i>
-                                            </div>
-                                            <div class="absolute -bottom-5 end-0">
-                                                <i data-lucide="quote" class="h-8 w-8 text-primary fill-primary"></i>
-                                            </div>
-                                            <p class="text-base text-default-400 font-medium">Food is the best. Besides the
-                                                many and
-                                                delicious meals, the service is also very good, especially in the very fast
-                                                delivery. I highly
-                                                recommend Food to you.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end slide -->
-                                <div class="swiper-slide">
-                                    <div class="relative cursor-pointer">
-                                        <div class="flex items-center gap-3 mb-12">
-                                            <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full">
-                                            <div class="">
-                                                <h6 class="text-base/none font-medium text-default-900 mb-2">Nancy C. Hunter
-                                                </h6>
-                                                <div class="flex gap-1.5">
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="relative px-12">
-                                            <div class="absolute -top-5 start-0">
-                                                <i data-lucide="quote"
-                                                    class="h-8 w-8 text-primary fill-primary rotate-180"></i>
-                                            </div>
-                                            <div class="absolute -bottom-5 end-0">
-                                                <i data-lucide="quote" class="h-8 w-8 text-primary fill-primary"></i>
-                                            </div>
-                                            <p class="text-base text-default-400 font-medium">Food is the best. Besides the
-                                                many and
-                                                delicious meals, the service is also very good, especially in the very fast
-                                                delivery. I highly
-                                                recommend Food to you.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end slide -->
-                                <div class="swiper-slide">
-                                    <div class="relative cursor-pointer">
-                                        <div class="flex items-center gap-3 mb-12">
-                                            <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full">
-                                            <div class="">
-                                                <h6 class="text-base/none font-medium text-default-900 mb-2">Jeannette C.
-                                                    Siebert</h6>
-                                                <div class="flex gap-1.5">
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                    <button><i data-lucide="star"
-                                                            class="h-4 w-4 text-yellow-400 fill-yellow-400"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="relative px-12">
-                                            <div class="absolute -top-5 start-0">
-                                                <i data-lucide="quote"
-                                                    class="h-8 w-8 text-primary fill-primary rotate-180"></i>
-                                            </div>
-                                            <div class="absolute -bottom-5 end-0">
-                                                <i data-lucide="quote" class="h-8 w-8 text-primary fill-primary"></i>
-                                            </div>
-                                            <p class="text-base text-default-400 font-medium">Food is the best. Besides the
-                                                many and
-                                                delicious meals, the service is also very good, especially in the very fast
-                                                delivery. I highly
-                                                recommend Food to you.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- end slide -->
+
                             </div>
                         </div>
                         <div class="swiper h-24 clients-testimonial-pagination relative !mt-6">

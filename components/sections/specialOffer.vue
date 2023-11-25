@@ -1,7 +1,7 @@
 <template>
-    <section class="lg:py-28 py-10 relative bg-no-repeat bg-cover bg-[url(../images/home/offer-bg.png)]">
+    <section class="rounded  py-10 relative bg-no-repeat bg-cover bg-[url(/assets/offer-bg.png)]">
         <div class="absolute inset-0 "></div>
-        <div class="container">
+        <div class="container p-8">
             <div class="relative lg:w-1/2 w-full">
                 <h4 class="font-handrawn text-2xl text-yellow-500 mb-6">Special Combo Offer</h4>
                 <h2 class="text-4xl font-semibold text-white mb-8">We make best Food in your town</h2>
@@ -10,9 +10,8 @@
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                 <div class="inline-flex flex-wrap items-center justify-center gap-4">
-                    <a href="javascript:void(0)"
-                        class="py-4 px-10 font-medium text-white bg-primary rounded-full hover:bg-primary-500 transition-all">Get
-                        started</a>
+
+                    <VueButton name="Get started" type="button" className="py-4" />
                     <h4 class="text-yellow-400 font-medium text-2xl">$23.47 <span
                             class="text-lg line-through text-white/75">$44.99</span></h4>
                 </div>
