@@ -10,7 +10,7 @@
 
                     <div class="flex flex-wrap w-full">
                         <div class="lg:h-[30rem] h-auto lg:w-full w-screen custom-scroll overflow-auto lg:mx-0 -mx-4 px-2">
-                            <nav class="flex lg:flex-col gap-2">
+                            <nav class="flex lg:flex-col gap-2 ">
 
                                 <button v-for="i in 7" :key="i" type="button" class="flex p-1" id="coffee-menu-item">
                                     <span
@@ -31,9 +31,9 @@
                 <div class="lg:col-span-3 overflow-auto">
                     <div class="relative lg:mt-24 ">
                         <div class="bg-primary/10 min-w-min rounded-lg lg:pb-16 ">
-                            <div class="lg:p-6 p-4 flex flex-row  gap-4">
-                                <div v-for="i in 4" :key="i">
-                                    <div class="grid grid-cols-1 w-64">
+                            <div class="lg:p-6 p-4 flex flex-row snap  gap-4">
+                                <div v-for="i in 9" :key="i" class="">
+                                    <div class="grid grid-cols-1 w-64 scroll-ml-16 snap-start">
                                         <div class="swiper menu-swiper w-full h-full">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">

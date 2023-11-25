@@ -1,11 +1,12 @@
 <template>
     <div>
 
+        <VueLanguage />
+
         <body>
 
 
 
-            <VueLanguage />
 
             <NavHeader />
 
