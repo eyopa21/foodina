@@ -1,6 +1,6 @@
 <template>
     <section class="lg:py-16 py-6">
-        <div class="container p-8">
+        <div class="container md:p-8">
             <div class="grid lg:grid-cols-4 lg:gap-10 gap-6">
                 <div>
                     <div>
@@ -10,8 +10,7 @@
 
                     <div class="flex flex-wrap w-full">
                         <div class="lg:h-[30rem] h-auto lg:w-full w-screen custom-scroll overflow-auto lg:mx-0 -mx-4 px-2">
-                            <nav class="flex lg:flex-col gap-2" aria-label="Tabs" role="tablist"
-                                data-hs-tabs-vertical="true">
+                            <nav class="flex lg:flex-col gap-2">
 
                                 <button v-for="i in 7" :key="i" type="button" class="flex p-1" id="coffee-menu-item">
                                     <span
@@ -29,12 +28,12 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-3">
-                    <div class="relative lg:mt-24">
-                        <div class="bg-primary/10 rounded-lg lg:pb-16">
-                            <div class="lg:p-6 p-4 grid grid-cols-3 grid-col gap-4">
+                <div class="lg:col-span-3 overflow-auto">
+                    <div class="relative lg:mt-24 ">
+                        <div class="bg-primary/10 min-w-min rounded-lg lg:pb-16 ">
+                            <div class="lg:p-6 p-4 flex flex-row  gap-4">
                                 <div v-for="i in 4" :key="i">
-                                    <div class="grid grid-cols-1">
+                                    <div class="grid grid-cols-1 w-64">
                                         <div class="swiper menu-swiper w-full h-full">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
