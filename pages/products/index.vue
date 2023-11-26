@@ -3,7 +3,7 @@ const layout = useLayout();
 </script>
 
 <template>
-    <div class="pt-12">
+    <div class="">
         <VueBreadCrumb />
         <section class="py-10">
             <div class="container">

@@ -1,7 +1,7 @@
 <template>
     <div class="">
 
-        <div class="sticky top-28">
+        <div class="">
             <div class="  border border-default-200 rounded-lg p-5 mb-5">
                 <h4 class="text-lg font-semibold text-default-800 mb-5">Cart Totals</h4>
                 <div class="mb-6">
