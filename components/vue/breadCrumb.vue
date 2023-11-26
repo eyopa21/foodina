@@ -1,5 +1,5 @@
 <template>
-    <section class="lg:flex items-center hidden bg-default-400/10 h-14">
+    <section class="lg:flex mb-4 items-center hidden bg-default-400/10 h-14">
         <div class="container">
             <div class="flex items-center">
                 <ol aria-label="Breadcrumb" class="flex items-center whitespace-nowrap min-w-0 gap-2">

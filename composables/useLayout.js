@@ -3,7 +3,7 @@ export default function() {
         return {
             showSearchPopUp: false,
             showSidebar: false,
-            showFilterSideBar: true
+            showFilterSideBar: false
             
 
         }
