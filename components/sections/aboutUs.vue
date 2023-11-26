@@ -1,5 +1,5 @@
 <template>
-    <section class="lg:py-16 py-6 m-4 md:m-16 border-2 border-primary rounded-2xl">
+    <section class="lg:py-16 py-6 m-4 md:m-8 border-2 border-primary rounded-2xl">
         <div class="container">
             <div class="grid lg:grid-cols-2 items-start gap-10">
                 <div

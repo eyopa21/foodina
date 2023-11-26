@@ -18,7 +18,7 @@ const isDark = computed({
 
 
 
-        <div class="sticky top-0 z-50">
+        <div class="sticky top-0 z-40">
 
             <NavHeader />
         </div>

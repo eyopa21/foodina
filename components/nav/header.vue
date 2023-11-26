@@ -42,7 +42,8 @@ const items = [
 <template>
     <div>
         <!-- Main Navigation Menu -->
-        <header id="navbar" class=" w-full bg-white dark:bg-gray-900 border-b border-primary  transition-all">
+        <header id="navbar"
+            class=" w-full bg-white dark:bg-gray-900 border-b border-opacity-20 border-primary  transition-all">
             <div class="lg:h-20 h-14 flex items-center">
                 <div class="container">
                     <div class="grid lg:grid-cols-3 grid-cols-2 items-center gap-4">
@@ -61,11 +62,11 @@ const items = [
                         </div>
 
                         <!-- Nevigation Menu -->
-                        <ul class="menu lg:flex items-center justify-center hidden relative">
+                        <ul class=" lg:flex items-center justify-center hidden relative">
                             <!-- Home Menu -->
-                            <li v-for="i in navs" :key="i" class="menu-item">
-                                <NuxtLink
-                                    class="inline-flex items-center text-sm lg:text-base font-medium text-default-800 py-2 px-4 rounded-full hover:text-primary "
+                            <li v-for="i in navs" :key="i">
+                                <NuxtLink active-class="text-primary border-b border-primary"
+                                    class="inline-flex items-center text-sm lg:text-base font-medium text-default-800 py-2 px-4  hover:text-primary "
                                     :to="i.to">{{ i.name }}
                                 </NuxtLink>
                             </li>
@@ -107,6 +108,7 @@ const items = [
                                             href="javascript:void(0)">
                                             <Icon name="i-material-symbols-person-2-outline-rounded" class="w-6 h-6"
                                                 data-lucide="user"></Icon>
+
                                         </a>
                                     </UDropdown>
                                 </div>

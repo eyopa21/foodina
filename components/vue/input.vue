@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-full">
         <label :for="props.name" class="text-md font-medium text-default-950 mb-4">{{ props.label }}</label>
 
         <input :type="props.type" :name="props.name"

@@ -63,12 +63,11 @@
                                     <label for="subscribeEmail"
                                         class="text-lg font-medium text-default-950 mb-4">Subscribe</label>
                                     <div class="flex rounded-md shadow-sm">
-                                        <input type="email" id="subscribeEmail" name="subscribeEmail"
-                                            class="py-3 px-4 block w-full bg-white border-default-200 rounded-s-md text-sm dark:bg-default-50"
-                                            placeholder="Email address">
+                                        <VueInput type="email" name="subscribe" placeholder="Email address" />
+
                                         <button type="button"
                                             class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-e-md border border-transparent font-semibold bg-primary text-white hover:bg-primary-500 transition-all text-sm">
-                                            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                                            <Icon name="i-heroicons-arrow-right-20-solid" class="h-5 w-5"></Icon>
                                         </button>
                                     </div>
                                 </form>
