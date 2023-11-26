@@ -42,7 +42,8 @@ const items = [
 <template>
     <div>
         <!-- Main Navigation Menu -->
-        <header id="navbar" class="fixed bg-white dark:bg-gray-900  top-0 z-20 border-b border-primary  transition-all">
+        <header id="navbar"
+            class="fixed w-full bg-white dark:bg-gray-900  top-0 z-20 border-b border-primary  transition-all">
             <div class="lg:h-20 h-14 flex items-center">
                 <div class="container">
                     <div class="grid lg:grid-cols-3 grid-cols-2 items-center gap-4">
