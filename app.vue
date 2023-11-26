@@ -13,7 +13,7 @@
 
 <style>
 /* Custom styles for sticky behavior */
-.sticky {
+.stickyy {
   position: -webkit-sticky;
   position: sticky;
   background-color: red;

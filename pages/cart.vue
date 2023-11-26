@@ -95,7 +95,7 @@
                         </div><!-- end grid-cols -->
                     </div>
 
-                    <ProductsCartTotal class="" />
+                    <ProductsCartTotal class="sticky top-[20%]" />
                 </div>
             </div>
         </section>
