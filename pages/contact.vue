@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="">
 
         <section class="lg:py-16 py-6">
             <VueBreadCrumb />
-            <div class="container">
+            <div class="container ">
                 <div class="grid lg:grid-cols-5 gap-10">
                     <div class="lg:col-span-2">
                         <h1 class="text-2xl font-semibold text-default-800 mb-2">Contact Information</h1>
@@ -19,24 +19,18 @@
                         <form>
                             <div class="grid lg:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-base/normal text-default-950 mb-2" for="firstName">First
-                                        Name</label>
-                                    <input id="firstName"
-                                        class="block w-full rounded-full py-2.5 px-4 bg-transparent dark:bg-default-50 border border-default-200 focus:ring-transparent focus:border-default-200"
-                                        type="text" placeholder="First name" fdprocessedid="0h4umg">
+
+
+                                    <VueInput name="name" label="Name" type="text" placeholder="Your name here..." />
                                 </div>
                                 <div>
-                                    <label class="block text-base/normal text-default-950 mb-2" for="lastName">Last
-                                        Name</label>
-                                    <input id="lastName"
-                                        class="block w-full rounded-full py-2.5 px-4 bg-transparent dark:bg-default-50 border border-default-200 focus:ring-transparent focus:border-default-200"
-                                        type="text" placeholder="Last Name" fdprocessedid="423ujg">
+
+
+                                    <VueInput name="subject" label="Subject" type="text" placeholder="The subject here.." />
                                 </div>
                                 <div class="lg:col-span-2">
-                                    <label class="block text-base/normal text-default-950 mb-2" for="e_mail">E-mail</label>
-                                    <input id="e_mail"
-                                        class="block w-full rounded-full py-2.5 px-4 bg-transparent dark:bg-default-50 border border-default-200 focus:ring-transparent focus:border-default-200"
-                                        type="email" placeholder="Enter your email" fdprocessedid="r40m6g">
+
+                                    <VueInput name="email" label="Email" type="email" placeholder="Your email here.." />
                                 </div>
                                 <div class="lg:col-span-2">
                                     <label class="block text-base/normal text-default-950 mb-2"
@@ -46,9 +40,8 @@
                                         rows="5" type="text" placeholder="Enter your message"></textarea>
                                 </div>
                                 <div>
-                                    <a href="javascript:void(0)"
-                                        class="inline-flex items-center justify-center px-10 py-3 rounded-full text-base font-medium bg-primary text-white capitalize transition-all hover:bg-primary-500">Send
-                                        Message</a>
+
+                                    <VueButton name="Send Message" type="submit" className="py-3" />
                                 </div>
                             </div>
                         </form>

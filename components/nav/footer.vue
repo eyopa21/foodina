@@ -104,8 +104,9 @@
                                 Cookies
                             </a>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer></template>
+    </footer>
+</template>
