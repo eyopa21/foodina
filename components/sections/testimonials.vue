@@ -1,6 +1,6 @@
 <template>
     <section class="lg:py-16 py-6 m-8">
-        <div class="container p-8 md:p-32 border-2 border-primary rounded-xl ">
+        <div class="container  md:p-32 border-2 border-primary rounded-xl ">
             <div class="grid lg:grid-cols-2 grid-cols-1 items-center gap-20">
                 <div>
                     <div class="relative">

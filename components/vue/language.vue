@@ -12,7 +12,7 @@ const items = [
 
 <template>
     <!-- Offer/Help Menu -->
-    <div class="h-8 lg:flex z-100  items-center hidden bg-primary-300 text-white ">
+    <div class="h-8 lg:flex z-100  items-center hidden bg-red-700 text-white ">
         <div class="container">
             <nav class="grid lg:grid-cols-3 items-center gap-4">
                 <!-- Language Dropdown -->

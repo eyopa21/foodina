@@ -1,47 +1,6 @@
 <template>
-    <section class="lg:flex items-center hidden bg-default-400/10 h-14">
-        <div class="container">
-            <div class="flex items-center">
-                <ol aria-label="Breadcrumb" class="flex items-center whitespace-nowrap min-w-0 gap-2">
-                    <li class="text-sm">
-                        <a class="flex items-center gap-2 align-middle text-default-800 transition-all leading-none hover:text-primary-500"
-                            href="javascript:void(0)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                data-lucide="home" class="lucide lucide-home w-4 h-4">
-                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                            </svg>
-                            Home
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                data-lucide="chevron-right" class="lucide lucide-chevron-right w-4 h-4">
-                                <path d="m9 18 6-6-6-6"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="text-sm">
-                        <a class="flex items-center gap-2 align-middle text-default-800 transition-all leading-none hover:text-primary-500"
-                            href="javascript:void(0)">
-                            Product
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                data-lucide="chevron-right" class="lucide lucide-chevron-right w-4 h-4">
-                                <path d="m9 18 6-6-6-6"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li aria-current="page"
-                        class="text-sm font-medium text-primary truncate leading-none hover:text-primary-500">
-                        Details
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </section>
-    <section class="lg:py-10 py-6">
+    <section class="">
+        <VueBreadCrumb />
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-6">
                 <div class="grid grid-cols-1">
@@ -101,35 +60,30 @@
 
                     <div class="flex items-center gap-3 mb-3">
                         <div class="flex gap-1.5">
-                            <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star-half-stroke text-base text-yellow-400"></i></span>
+                            <span v-for="i in 5" :key="i">
+                                <Icon name="i-heroicons-star-solid" class="fa-solid fa-star text-base text-yellow-400">
+                                </Icon>
+                            </span>
+
                         </div>
                         <div class="h-4 w-px bg-default-400"></div>
                         <h5 class="text-sm text-default-500">54 Reviews</h5>
                     </div>
 
                     <p class="text-sm text-default-500 mb-4">Mexican burritos are usually made with a wheat tortilla and
-                        contain grilled meat, cheese toppings, and fresh vegetables which are sources of vitamins, proteins,
+                        contain grilled meat, cheese toppings, and fresh vegetables which are sources of vitamins,
+                        proteins,
                         fibers, minerals, and antioxidants.
                         This makes burritos a balanced meal that can be enjoyed in moderation as part of a healthy meal
                         plan.</p>
 
                     <div class="flex gap-2 mb-5">
-                        <div class="border border-default-200 rounded-full px-3 py-1.5 flex items-center gap-2.5">
-                            <img src="/assets/non-veg-98aa631a.svg" class="w-4 h-4">
+                        <div v-for="i in 2" :key="i"
+                            class="border border-default-200 hover:border-primary rounded-full px-3 py-1.5 flex items-center gap-2.5">
+                            <Icon name="i-heroicons-star-solid" class="w-4 h-4" />
                             <span class="text-xs">Non Vegetable</span>
                         </div>
 
-                        <div class="border border-default-200 rounded-full px-3 py-1.5 flex items-center">
-                            <span class="text-xs">Mexican</span>
-                        </div>
-
-                        <div class="border border-default-200 rounded-full px-3 py-1.5 flex items-center">
-                            <span class="text-xs">Breakfast</span>
-                        </div>
                     </div>
 
                     <div class="flex items-center gap-3 mb-8">
@@ -157,28 +111,17 @@
                     <div class="flex items-center gap-2 mb-8">
                         <div class="relative z-10 inline-flex justify-between border border-default-200 p-1 rounded-full">
                             <button type="button"
-                                class="minus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-9 w-9 text-sm inline-flex items-center justify-center"
-                                fdprocessedid="13y84j">–</button>
+                                class="minus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-9 w-9 text-sm inline-flex items-center justify-center">–</button>
                             <input type="text" class="w-12 border-0 text-sm text-center focus:ring-0 p-0 bg-transparent"
-                                value="1" min="0" max="100" readonly="" fdprocessedid="91829j">
+                                value="1" min="0" max="100" readonly="">
                             <button type="button"
-                                class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-9 w-9 text-sm inline-flex items-center justify-center"
-                                fdprocessedid="2qc2sm">+</button>
+                                class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-9 w-9 text-sm inline-flex items-center justify-center">+</button>
                         </div>
 
-                        <a href="cart.html"
-                            class="inline-flex items-center justify-center rounded-full border border-primary bg-primary px-10 py-3 text-center text-sm font-medium text-white shadow-sm transition-all duration-500 hover:bg-primary-500">
-                            Buy Now
-                        </a>
+                        <VueButton name="Buy now" type="button" className="py-3" />
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            data-lucide="heart"
-                            class="lucide lucide-heart h-8 w-8 text-default-400 cursor-pointer hover:fill-red-600 hover:text-red-600 focus:fill-red-600 focus:text-red-600">
-                            <path
-                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                            </path>
-                        </svg>
+                        <Icon name="i-heroicons-heart-20-solid"
+                            class="lucide lucide-heart h-10 w-10 text-default-400 cursor-pointer hover:fill-red-600 hover:text-red-600 focus:fill-red-600 focus:text-red-600" />
                     </div>
 
                     <div class="mb-6">
@@ -208,12 +151,8 @@
                     </div>
 
                     <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            data-lucide="eye" class="lucide lucide-eye w-5 h-5 me-2 text-primary">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
+
+                        <Icon name="i-heroicons-eye" class="lucide lucide-eye w-5 h-5 me-2 text-primary" />
                         <h5 class="text-sm text-default-600"><span class="text-primary font-semibold">152</span>&nbsp;
                             People are viewing this right now</h5>
                     </div>
@@ -225,7 +164,7 @@
         <div class="container">
             <h4 class="text-xl font-semibold text-default-800 mb-4">May you also like</h4>
             <div class="grid xl:grid-cols-4 sm:grid-cols-2 gap-5 mb-10">
-                <div
+                <div v-for="i in 4" :key="i"
                     class="group border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
                     <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
                         <div class="w-56 h-52 mb-4 mx-auto">
@@ -274,304 +213,19 @@
                                 </div>
                             </div>
 
-                            <a href="cart.html"
-                                class="relative z-10 w-full inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition-all duration-500 hover:bg-primary-500">Add
-                                to cart</a><!-- end btn -->
+                            <VueButton name="Add to cart" type="button" className="py-3 w-full text-center" />
                         </div>
                     </div>
                 </div><!-- end grid-cols -->
 
-                <div
-                    class="group border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                    <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                        <div class="w-56 h-52 mb-4 mx-auto">
-                            <img src="/assets/noodles-65d947ec.png"
-                                class="w-full h-full group-hover:scale-105 transition-all">
-                        </div>
-
-                        <div class="pt-2">
-                            <div class="flex items-center justify-between mb-4">
-                                <a href="product-detail.html"
-                                    class="text-default-800 text-xl font-semibold line-clamp-1 after:absolute after:inset-0">Noodles</a>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" data-lucide="heart"
-                                    class="lucide lucide-heart h-6 w-6 text-default-200 cursor-pointer hover:text-red-500 hover:fill-red-500 relative z-10 transition-all">
-                                    <path
-                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-2 mb-4">
-                                <span class="bg-primary rounded-full p-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" data-lucide="star"
-                                        class="lucide lucide-star h-3 w-3 text-white fill-white">
-                                        <polygon
-                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                        </polygon>
-                                    </svg></span>
-                                <span class="text-sm text-default-950 from-inherit">4.9</span>
-                            </span>
-                            <div class="flex items-end justify-between mb-4">
-                                <h4 class="font-semibold text-xl text-default-900">$12.34</h4>
-                                <div
-                                    class="relative z-10 inline-flex justify-between border border-default-200 p-1 rounded-full">
-                                    <button type="button"
-                                        class="minus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="323v14">–</button>
-                                    <input type="text"
-                                        class="w-8 border-0 text-sm text-center text-default-800 focus:ring-0 p-0 bg-transparent"
-                                        value="1" min="0" max="100" readonly="" fdprocessedid="s5jxcwg">
-                                    <button type="button"
-                                        class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="p43ck">+</button>
-                                </div>
-                            </div>
-                            <a href="cart.html"
-                                class="relative z-10 w-full inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition-all duration-500 hover:bg-primary-500">Add
-                                to cart</a><!-- end btn -->
-                        </div>
-                    </div>
-                </div><!-- end grid-cols -->
-
-                <div
-                    class="group border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                    <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                        <div class="w-56 h-52 mb-4 mx-auto">
-                            <img src="/assets/red-velvet-pastry-b09214ba.png"
-                                class="w-full h-full group-hover:scale-105 transition-all">
-                        </div>
-
-                        <div class="pt-2">
-                            <div class="flex items-center justify-between mb-4">
-                                <a href="product-detail.html"
-                                    class="text-default-800 text-xl font-semibold line-clamp-1 after:absolute after:inset-0">Red
-                                    Velvet Pastry</a>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" data-lucide="heart"
-                                    class="lucide lucide-heart h-6 w-6 text-red-500 fill-red-500 cursor-pointer">
-                                    <path
-                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-2 mb-4">
-                                <span class="bg-primary rounded-full p-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" data-lucide="star"
-                                        class="lucide lucide-star h-3 w-3 text-white fill-white">
-                                        <polygon
-                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                        </polygon>
-                                    </svg></span>
-                                <span class="text-sm text-default-950 from-inherit">4.0</span>
-                            </span>
-                            <div class="flex items-end justify-between mb-4">
-                                <h4 class="font-semibold text-xl text-default-900">$42.25</h4>
-                                <div
-                                    class="relative z-10 inline-flex justify-between border border-default-200 p-1 rounded-full">
-                                    <button type="button"
-                                        class="minus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="k9kk5r">–</button>
-                                    <input type="text"
-                                        class="w-8 border-0 text-sm text-center text-default-800 focus:ring-0 p-0 bg-transparent"
-                                        value="1" min="0" max="100" readonly="" fdprocessedid="bn1kxp">
-                                    <button type="button"
-                                        class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="srut59">+</button>
-                                </div>
-                            </div>
-
-                            <a href="cart.html"
-                                class="relative z-10 w-full inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition-all duration-500 hover:bg-primary-500">Add
-                                to cart</a><!-- end btn -->
-                        </div>
-                    </div>
-                </div><!-- end grid-cols -->
-
-                <div
-                    class="group border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                    <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                        <div class="w-56 h-52 mb-4 mx-auto">
-                            <img src="/assets/spaghetti-c5ad136f.png"
-                                class="w-full h-full group-hover:scale-105 transition-all">
-                        </div>
-
-                        <div class="pt-2">
-                            <div class="flex items-center justify-between mb-4">
-                                <a href="product-detail.html"
-                                    class="text-default-800 text-xl font-semibold line-clamp-1 after:absolute after:inset-0">Spaghetti</a>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" data-lucide="heart"
-                                    class="lucide lucide-heart h-6 w-6 text-default-200 cursor-pointer hover:text-red-500 hover:fill-red-500 relative z-10 transition-all">
-                                    <path
-                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="inline-flex items-center gap-2 mb-4">
-                                <span class="bg-primary rounded-full p-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" data-lucide="star"
-                                        class="lucide lucide-star h-3 w-3 text-white fill-white">
-                                        <polygon
-                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                        </polygon>
-                                    </svg></span>
-                                <span class="text-sm text-default-950 from-inherit">4.9</span>
-                            </span>
-                            <div class="flex items-end justify-between mb-4">
-                                <h4 class="font-semibold text-xl text-default-900">$12.42</h4>
-                                <div
-                                    class="relative z-10 inline-flex justify-between border border-default-200 p-1 rounded-full">
-                                    <button type="button"
-                                        class="minus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="tlp4ot">–</button>
-                                    <input type="text"
-                                        class="w-8 border-0 text-sm text-center text-default-800 focus:ring-0 p-0 bg-transparent"
-                                        value="1" min="0" max="100" readonly="" fdprocessedid="tu1p2j">
-                                    <button type="button"
-                                        class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-6 w-6 text-sm inline-flex items-center justify-center"
-                                        fdprocessedid="txf7rk">+</button>
-                                </div>
-                            </div>
-
-                            <a href="cart.html"
-                                class="relative z-10 w-full inline-flex items-center justify-center rounded-full border border-primary bg-primary px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition-all duration-500 hover:bg-primary-500">Add
-                                to cart</a><!-- end btn -->
-                        </div>
-                    </div>
-                </div><!-- end grid-cols -->
             </div><!-- end grid -->
 
-            <h4 class="text-xl font-semibold text-default-800 mb-4">Customer Rating</h4>
+            <ProductsRating />
 
-            <div class="grid lg:grid-cols-4 items-center gap-5">
-                <div class="bg-primary/10 py-8 rounded-lg flex flex-col items-center justify-center">
-                    <h1 class="text-6xl font-semibold text-default-800 mb-4">4.7</h1>
-
-                    <div class="flex gap-1.5 mb-2">
-                        <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                        <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                        <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                        <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                        <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                    </div><!-- end flex -->
-
-                    <h4 class="text-base font-medium text-default-700">Customer Rating <span
-                            class="font-normal text-default-500">(23,476)</span></h4>
-                </div><!-- end card -->
-
-                <div class="xl:col-span-2 md:col-span-3">
-                    <div class="grid md:grid-cols-12 items-center gap-2 mb-3">
-                        <div class="md:col-span-3 flex gap-1.5 lg:justify-center">
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-7">
-                            <div class="flex w-full h-1 bg-default-200 rounded-full overflow-hidden">
-                                <div class="flex flex-col justify-center overflow-hidden bg-primary w-4/6 rounded"
-                                    role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-2">
-                            <h4 class="inline-block text-sm font-medium text-default-700">66%</h4>
-                            <span class="font-normal text-default-500">(94,532)</span>
-                        </div><!-- end grid-cols -->
-                    </div><!-- end grid -->
-
-                    <div class="grid md:grid-cols-12 items-center gap-2 mb-3">
-                        <div class="md:col-span-3 flex gap-1.5 lg:justify-center">
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-7">
-                            <div class="flex w-full h-1 bg-default-200 rounded-full overflow-hidden">
-                                <div class="flex flex-col justify-center overflow-hidden bg-primary w-1/4 rounded"
-                                    role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-2">
-                            <h4 class="inline-block text-sm font-medium text-default-700">25%</h4>
-                            <span class="font-normal text-default-500">(6,717)</span>
-                        </div><!-- end grid-cols -->
-                    </div><!-- end grid -->
-
-                    <div class="grid md:grid-cols-12 items-center gap-2 mb-3">
-                        <div class="md:col-span-3 flex gap-1.5 lg:justify-center">
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-7">
-                            <div class="flex w-full h-1 bg-default-200 rounded-full overflow-hidden">
-                                <div class="flex flex-col justify-center overflow-hidden bg-primary w-2/12 rounded"
-                                    role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-2">
-                            <h4 class="inline-block text-sm font-medium text-default-700">16%</h4>
-                            <span class="font-normal text-default-500">(714)</span>
-                        </div><!-- end grid-cols -->
-                    </div><!-- end grid -->
-
-                    <div class="grid md:grid-cols-12 items-center gap-2 mb-3">
-                        <div class="md:col-span-3 flex gap-1.5 lg:justify-center">
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-7">
-                            <div class="flex w-full h-1 bg-default-200 rounded-full overflow-hidden">
-                                <div class="flex flex-col justify-center overflow-hidden bg-primary w-1/12 rounded"
-                                    role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-2">
-                            <h4 class="inline-block text-sm font-medium text-default-700">8%</h4>
-                            <span class="font-normal text-default-500">(643)</span>
-                        </div><!-- end grid-cols -->
-                    </div><!-- end grid -->
-
-                    <div class="grid md:grid-cols-12 items-center gap-2">
-                        <div class="md:col-span-3 flex gap-1.5 lg:justify-center">
-                            <span><i class="fa-solid fa-star text-lg text-yellow-400"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                            <span><i class="fa-solid fa-star text-lg text-default-200"></i></span>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-7">
-                            <div class="flex w-full h-1 bg-default-200 rounded-full overflow-hidden">
-                                <div class="flex flex-col justify-center overflow-hidden bg-primary w-[4%] rounded"
-                                    role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!-- end grid-cols -->
-                        <div class="md:col-span-2">
-                            <h4 class="inline-block text-sm font-medium text-default-700">4%</h4>
-                            <span class="font-normal text-default-500">(152)</span>
-                        </div><!-- end grid-cols -->
-                    </div><!-- end grid -->
-                </div><!-- end grid-cols -->
-            </div><!-- end grid -->
-
-            <div class="pt-10">
+            <div class="pt-10 md:m-8">
                 <h4 class="text-base font-medium text-default-800">Customer Review</h4>
 
-                <div class="border-b border-default-200 py-5">
+                <div v-for="i in 6" :key="i" class="border-b mb-2 border-default-200 py-5">
                     <div class="flex items-center mb-3">
                         <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full me-4">
                         <div class="">
@@ -589,101 +243,14 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-default-600">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    <p class="text-default-600">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis
                         praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+                        occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
+                        id
                         est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                 </div><!-- end card -->
 
-                <div class="border-b border-default-200 py-5">
-                    <div class="flex items-center mb-3">
-                        <img src="/assets/avatar2-189b0d01.png" class="h-12 w-12 rounded-full me-4">
-                        <div class="">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h4 class="text-sm font-medium text-default-800">Alfonso Korsgaard</h4>
-                                <i class="fa-solid fa-circle text-[5px] text-default-400"></i>
-                                <h4 class="text-sm font-medium text-default-400">12 hours ago</h4>
-                            </div>
-                            <div class="flex gap-1.5">
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-default-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div><!-- end card -->
-
-                <div class="border-b border-default-200 py-5">
-                    <div class="flex items-center mb-3">
-                        <img src="/assets/avatar3-2bbdc0fd.png" class="h-12 w-12 rounded-full me-4">
-                        <div class="">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h4 class="text-sm font-medium text-default-800">Marcus Baptista</h4>
-                                <i class="fa-solid fa-circle text-[5px] text-default-400"></i>
-                                <h4 class="text-sm font-medium text-default-400">2 days ago</h4>
-                            </div>
-                            <div class="flex gap-1.5">
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-default-600">ed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-                        aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                        reprehenderit qui in ea voluptate.</p>
-                </div><!-- end card -->
-
-                <div class="border-b border-default-200 py-5">
-                    <div class="flex items-center mb-3">
-                        <img src="/assets/avatar4-85475652.png" class="h-12 w-12 rounded-full me-4">
-                        <div class="">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h4 class="text-sm font-medium text-default-800">Jaxson Donin</h4>
-                                <i class="fa-solid fa-circle text-[5px] text-default-400"></i>
-                                <h4 class="text-sm font-medium text-default-400">5 days ago</h4>
-                            </div>
-                            <div class="flex gap-1.5">
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-default-600">Vestibulum tincidunt blandit odio vel finibus.</p>
-                </div><!-- end card -->
-
-                <div class="py-5">
-                    <div class="flex items-center mb-3">
-                        <img src="/assets/avatar5-504b77fd.png" class="h-12 w-12 rounded-full me-4">
-                        <div class="">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h4 class="text-sm font-medium text-default-800">Hanna Aminoff</h4>
-                                <i class="fa-solid fa-circle text-[5px] text-default-400"></i>
-                                <h4 class="text-sm font-medium text-default-400">7 days ago</h4>
-                            </div>
-                            <div class="flex gap-1.5">
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-default-600">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-                        voluptatibus maiores alias consequatur.</p>
-                </div><!-- end card -->
             </div><!-- end py -->
         </div>
     </section>

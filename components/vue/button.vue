@@ -10,7 +10,7 @@
         <div v-else>
             <a :type="props.type" :class="props.className"
                 class="group hover:scale-[103%]  px-10 font-medium text-white cursor-pointer bg-primary rounded-full hover:bg-primary-500 dark:hover:bg-primary-500 transition-all duration-500">
-                <span class="group-hover:border-b">
+                <span class="group-hover:font-semibold">
 
                     {{ props.name }}
                 </span>

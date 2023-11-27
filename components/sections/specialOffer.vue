@@ -1,5 +1,5 @@
 <template>
-    <section class="rounded  py-10 relative bg-no-repeat bg-cover bg-[url(/assets/offer-bg.png)]">
+    <section class="rounded w-full py-10 relative bg-no-repeat bg-cover bg-[url(/assets/offer-bg.png)]">
         <div class="absolute inset-0 "></div>
         <div class="container p-8">
             <div class="relative lg:w-1/2 w-full">

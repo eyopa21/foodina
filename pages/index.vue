@@ -11,7 +11,7 @@
         <SectionsAboutUs />
 
         <!-- Menu Section -->
-        <SectionsMenu />
+        <!--SectionsMenu /-->
 
         <!-- Testimonials Section -->
         <SectionsTestimonials />
@@ -20,7 +20,7 @@
         <SectionsSpecialOffer />
 
         <!-- Download App Section -->
-        <SectionsDownloadApp />
+        <!--SectionsDownloadApp /-->
 
 
 

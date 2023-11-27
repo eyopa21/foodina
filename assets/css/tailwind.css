@@ -8,6 +8,8 @@
 ::-webkit-scrollbar {
 
     height: 2px;
+    display: hidden;
+    @apply hidden;
 }
 
 /* Track */

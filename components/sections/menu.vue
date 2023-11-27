@@ -1,5 +1,5 @@
 <template>
-    <section class="lg:py-16 py-6">
+    <section class="lg:py-16 py-6 lg:border-2 m-2 lg:m-8 rounded-xl border-primary mt-32">
         <div class="container md:p-8">
             <div class="grid lg:grid-cols-4 lg:gap-10 gap-6">
                 <div>
@@ -28,8 +28,18 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-3 overflow-auto">
+                <div class="lg:col-span-3 overflow-auto ">
                     <div class="relative lg:mt-24 ">
+                        <!--div class="lg:flex items-center gap-1 absolute  !-top-10 !end-15 hidden">
+                            <div
+                                class="swiper-button-next after:content-[] h-12 w-12 flex justify-center items-center rounded-full text-white bg-primary transition-all">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </div>
+                            <div
+                                class="swiper-button-prev after:content-[] h-12 w-12 flex justify-center items-center rounded-full text-white bg-primary transition-all">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                        </!--div-->
                         <div class="bg-primary/10 min-w-min rounded-lg lg:pb-16 ">
                             <div class="lg:p-6 p-4 flex flex-row snap  gap-4">
                                 <div v-for="i in 9" :key="i" class="">
@@ -72,16 +82,7 @@
                             </div>
                         </div>
 
-                        <div class="lg:flex items-center gap-1 absolute !-top-10 !end-15 hidden">
-                            <div
-                                class="swiper-button-next after:content-[] h-12 w-12 flex justify-center items-center rounded-full text-white bg-primary transition-all">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </div>
-                            <div
-                                class="swiper-button-prev after:content-[] h-12 w-12 flex justify-center items-center rounded-full text-white bg-primary transition-all">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </div>
-                        </div>
+
 
                         <div class="lg:flex hidden">
                             <div class="swiper-pagination !bottom-12 !start-0"></div>
