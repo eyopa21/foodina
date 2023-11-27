@@ -55,10 +55,9 @@ const items = [
                             </button>
 
                             <!-- Navbar Brand Logo -->
-                            <a href="home.html">
-                                <img src="/assets/logo-dark-6dbab3e1.png" alt="logo" class="h-10 flex dark:hidden">
-                                <img src="/assets/logo-light-35c89c2c.png" alt="logo" class="h-10 hidden dark:flex">
-                            </a>
+                            <NuxtLink to="/">
+                                <span class="text-3xl text-primary uppercase hover:shadow-xl">Foodina</span>
+                            </NuxtLink>
                         </div>
 
                         <!-- Nevigation Menu -->

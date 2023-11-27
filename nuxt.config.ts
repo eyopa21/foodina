@@ -42,13 +42,7 @@ export default defineNuxtConfig({
     head: {
       meta: [
       ],
-      script: [
-        { src: '/assets/home-c.js', body: true },
-        { src: '/assets/theme-b.js', body: true },
-        { src: '/assets/free-mode.js', body: true },
-        { src: '/assets/navigation.js', body: true },
-        { src: '/assets/thumbs-a.js', body: true },
-      ],
+
       link: [
         {
           rel: 'icon',
