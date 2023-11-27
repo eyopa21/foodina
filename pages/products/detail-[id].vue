@@ -174,27 +174,21 @@
 
                         <div class="pt-2">
                             <div class="flex items-center justify-between mb-4">
-                                <a href="product-detail.html"
-                                    class="text-default-800 text-xl font-semibold line-clamp-1 after:absolute after:inset-0">Veg
-                                    Burger</a>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" data-lucide="heart"
-                                    class="lucide lucide-heart h-6 w-6 text-default-200 cursor-pointer hover:text-red-500 hover:fill-red-500 relative z-10 transition-all">
-                                    <path
-                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                                    </path>
-                                </svg>
+                                <NuxtLink to="/products/detail-4"
+                                    class="text-default-800 text-xl font-semibold line-clamp-1 after:absolute after:inset-0">
+                                    Veg
+                                    Burger</NuxtLink>
+
+                                <Icon name="i-heroicons-heart"
+                                    class="lucide lucide-heart h-6 w-6 text-default-200 cursor-pointer hover:text-red-500 hover:fill-red-500 relative z-10 transition-all" />
+
                             </div>
                             <span class="inline-flex items-center gap-2 mb-4">
-                                <span class="bg-primary rounded-full p-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" data-lucide="star"
-                                        class="lucide lucide-star h-3 w-3 text-white fill-white">
-                                        <polygon
-                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                        </polygon>
-                                    </svg></span>
+                                <span class="bg-primary rounded-full p-1">
+
+                                    <Icon name="i-heroicons-star-20-solid"
+                                        class="lucide lucide-star h-3 w-3 text-white fill-white" />
+                                </span>
                                 <span class="text-sm text-default-950 from-inherit">4.2</span>
                             </span>
                             <div class="flex items-end justify-between mb-4">
@@ -213,7 +207,9 @@
                                 </div>
                             </div>
 
+
                             <VueButton name="Add to cart" type="button" className="py-3 w-full text-center" />
+
                         </div>
                     </div>
                 </div><!-- end grid-cols -->
@@ -222,36 +218,7 @@
 
             <ProductsRating />
 
-            <div class="pt-10 md:m-8">
-                <h4 class="text-base font-medium text-default-800">Customer Review</h4>
-
-                <div v-for="i in 6" :key="i" class="border-b mb-2 border-default-200 py-5">
-                    <div class="flex items-center mb-3">
-                        <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full me-4">
-                        <div class="">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h4 class="text-sm font-medium text-default-800">Jaylon Botosh</h4>
-                                <i class="fa-solid fa-circle text-[5px] text-default-400"></i>
-                                <h4 class="text-sm font-medium text-default-400">Just now</h4>
-                            </div>
-                            <div class="flex gap-1.5">
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-yellow-400"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                                <span><i class="fa-solid fa-star text-base text-default-200"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-default-600">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                        blanditiis
-                        praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
-                        id
-                        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                </div><!-- end card -->
-
-            </div><!-- end py -->
+            <ProductsComments />
         </div>
     </section>
 </template>
