@@ -4,7 +4,9 @@
             <div class="grid lg:grid-cols-2 items-start gap-10">
                 <div
                     class="flex items-center justify-center h-96 mt-32 align-middle place-content-center w-full bg-default-500/5 rounded-lg">
-                    <img src="/assets/about-us-d5778dfe.png" class="h-full w-full py-16">
+
+                    <NuxtImg provider="cloudinary" loading="lazy" placeholder
+                        class="h-full w-full object-cover object-center" src="/v1701161319/pizza1_lfrymw.jpg" />
                 </div>
                 <div class="">
                     <span class="inline-flex py-2 px-4 text-sm text-primary rounded-full bg-primary/20 mb-6">About Us</span>
@@ -33,9 +35,11 @@
 
                         <VueButton name="Get started" type="button" className="py-3" />
                         <div class=" group hover:scale-[105%] translate-all duration-300 flex items-center gap-2">
-                            <img src="/assets/avatar3-2bbdc0fd.png" class="h-12 w-12 rounded-full">
+
+                            <NuxtImg provider="cloudinary" loading="lazy" placeholder class="h-12 w-12 rounded-full"
+                                src="/v1699086989/hxhsmc9ihoavcpogkyxw.jpg" />
                             <div class="">
-                                <h6 class="text-base font-medium text-default-900">Marley Culhane</h6>
+                                <h6 class="text-base font-medium text-default-900">Eyob Nigussie</h6>
                                 <p class="text-sm font-medium text-default-500">Founder CEO</p>
                             </div>
                         </div>

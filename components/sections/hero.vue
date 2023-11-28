@@ -40,7 +40,7 @@
                                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <div class="flex items-center -space-x-1">
                                         <div v-for="i in 3" :key="i" class="h-12 w-12">
-                                            <NuxtImg provider="cloudinary" loading="lazy" placeholder=""
+                                            <NuxtImg provider="cloudinary" loading="lazy" placeholder
                                                 class="h-full w-full rounded-full object-cover object-center ring ring-default-50"
                                                 src="/v1699086989/hxhsmc9ihoavcpogkyxw.jpg" />
                                         </div>
