@@ -11,18 +11,12 @@
                                 <div class="p-6">
                                     <h6 class="text-base font-semibold text-default-900 mb-2">Our Reviewers</h6>
                                     <div class="flex items-center justify-center -space-x-1">
-                                        <div class="h-12 w-12">
-                                            <img class="h-full w-full rounded-full object-cover object-center ring ring-default-100"
-                                                src="/assets/avatar1-25906796.png">
+                                        <div v-for="i in 3" :key="i" class="h-12 w-12">
+                                            <NuxtImg provider="cloudinary" loading="lazy" placeholder
+                                                class="h-full w-full rounded-full object-cover object-center ring ring-default-100"
+                                                src="/v1699086989/hxhsmc9ihoavcpogkyxw.jpg" />
                                         </div>
-                                        <div class="h-12 w-12">
-                                            <img class="h-full w-full rounded-full object-cover object-center ring ring-default-100"
-                                                src="/assets/avatar2-189b0d01.png">
-                                        </div>
-                                        <div class="h-12 w-12">
-                                            <img class="h-full w-full rounded-full object-cover object-center ring ring-default-100"
-                                                src="/assets/avatar3-2bbdc0fd.png">
-                                        </div>
+
                                         <div
                                             class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-primary text-default-50 font-medium ring ring-default-100">
                                             <span class="text-base"> 12K </span>
@@ -45,10 +39,13 @@
                                 <div class="swiper-slide">
                                     <div class="relative cursor-pointer">
                                         <div class="flex items-center gap-3 mb-12">
-                                            <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full">
+
+                                            <NuxtImg provider="cloudinary" loading="lazy" placeholder
+                                                class="h-12 w-12 rounded-full"
+                                                src="/v1699086989/hxhsmc9ihoavcpogkyxw.jpg" />
                                             <div class="">
-                                                <h6 class="text-base/none font-medium text-default-900 mb-2">Madelyn
-                                                    Baptista</h6>
+                                                <h6 class="text-base/none font-medium text-default-900 mb-2">Eyob
+                                                    Nigussie</h6>
                                                 <div class="flex gap-1.5">
                                                     <button v-for="i in 5" :key="i">
                                                         <Icon name="i-heroicons-star-solid"
@@ -81,18 +78,11 @@
                         </div>
                         <div class="swiper h-24 clients-testimonial-pagination relative !mt-6">
                             <div class="swiper-wrapper ps-12 !py-6 space-x-2">
-                                <div class="swiper-slide cursor-pointer !w-12 !h-12">
-                                    <img src="/assets/avatar1-25906796.png" class="h-12 w-12 rounded-full">
+                                <div v-for="i in 4" :key="i" class="swiper-slide cursor-pointer !w-12 !h-12">
+                                    <NuxtImg provider="cloudinary" loading="lazy" placeholder class="h-12 w-12 rounded-full"
+                                        src="/v1699086989/hxhsmc9ihoavcpogkyxw.jpg" />
                                 </div>
-                                <div class="swiper-slide cursor-pointer !w-12 !h-12">
-                                    <img src="/assets/avatar2-189b0d01.png" class="h-12 w-12 rounded-full">
-                                </div>
-                                <div class="swiper-slide cursor-pointer !w-12 !h-12">
-                                    <img src="/assets/avatar3-2bbdc0fd.png" class="h-12 w-12 rounded-full">
-                                </div>
-                                <div class="swiper-slide cursor-pointer !w-12 !h-12">
-                                    <img src="/assets/avatar4-85475652.png" class="h-12 w-12 rounded-full">
-                                </div>
+
                             </div>
                         </div>
                     </div>

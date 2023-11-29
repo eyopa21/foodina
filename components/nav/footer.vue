@@ -6,51 +6,68 @@
                     <div class="grid md:grid-cols-4 grid-cols-2 gap-6 mb-6">
                         <div class="flex flex-col gap-3">
                             <h5 class="mb-3 font-semibold text-default-950">About</h5>
-                            <div class="text-default-600"><a href="javascript:void(0);">About Us</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Features</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">News</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Careers</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Services</a></div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/about">About Us</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/services">Features</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/blog">News</NuxtLink>
+                            </div>
+
+                            <div class="text-default-600">
+                                <NuxtLink to="/services">Services</NuxtLink>
+                            </div>
                         </div>
 
                         <div class="flex flex-col gap-3">
                             <h5 class="mb-3 font-semibold text-default-950">Company</h5>
-                            <div class="text-default-600"><a href="javascript:void(0);">Our Team</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Partner with Us</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">FAQs</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Blog</a></div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/team">Our Team</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">Partner with Us</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/faqs">FAQs</NuxtLink>
+                            </div>
+
                         </div>
 
                         <div class="flex flex-col gap-3">
                             <h5 class="mb-3 font-semibold text-default-950">Support</h5>
-                            <div class="text-default-600"><a href="javascript:void(0);">About</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Support Center</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Feedback</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Contact Us</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">Accessibility</a></div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">About</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">Support Center</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">Feedback</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">Contact Us</NuxtLink>
+                            </div>
+                            <div class="text-default-600">
+                                <NuxtLink to="/contact">Accessibility</NuxtLink>
+                            </div>
                         </div>
 
                         <div class="flex flex-col gap-3">
                             <h5 class="mb-3 font-semibold text-default-950">Get in touch</h5>
-                            <div class="text-default-600"><a href="javascript:void(0);">(+123) 456 789 123</a></div>
-                            <div class="text-default-600"><a href="javascript:void(0);">example@mail.com</a></div>
+                            <div class="text-default-600 hover:underline"><a href="tel:0918784596">(+251) 918784596</a>
+                            </div>
+                            <div class="text-default-600 hover:underline"><a
+                                    href="mailto:jobtennis21@gmail.com">jobtennis21@mail.com</a>
+                            </div>
                             <div class="flex items-center gap-4">
-                                <a href="#!" class="cursor-pointer">
-                                    <i data-lucide="phone"
-                                        class="h-6 w-6 transition-all text-default-600 hover:text-primary"></i>
+                                <a v-for="i in 4" :key="i" href="#!" class="cursor-pointer">
+
+                                    <Icon name="i-heroicons-arrow-right-20-solid"
+                                        class="h-6 w-6 transition-all text-default-600 hover:text-primary"></Icon>
                                 </a>
-                                <a href="#!" class="cursor-pointer">
-                                    <i data-lucide="globe"
-                                        class="h-6 w-6 transition-all text-default-600 hover:text-primary"></i>
-                                </a>
-                                <a href="#!" class="cursor-pointer">
-                                    <i data-lucide="instagram"
-                                        class="h-6 w-6 transition-all text-default-600 hover:text-primary"></i>
-                                </a>
-                                <a href="#!" class="cursor-pointer">
-                                    <i data-lucide="twitter"
-                                        class="h-6 w-6 transition-all text-default-600 hover:text-primary"></i>
-                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -71,7 +88,7 @@
                                         </button>
                                     </div>
                                 </form>
-                                <p class="text-sm text-default-500 mb-6">A Res is a self-service shop offering a wide
+                                <p class="text-sm text-default-500 mb-6">Foodina is a self-service shop offering a wide
                                     variety of
                                     food,
                                     beverages &amp; household products we’re engage with their clients &amp; their team.</p>
@@ -86,20 +103,20 @@
                     <div class="grid lg:grid-cols-2 items-center gap-6">
                         <div>
                             <p class="text-default-600">
-                                2023 Design crafted <i data-lucide="heart"
+                                2023 Developed with <i data-lucide="heart"
                                     class="inline h-4 w-4 text-red-500 fill-red-500"></i> by
-                                Coderthemes.com
+                                Eyob Nigussie
                             </p>
                         </div>
 
                         <div class="flex justify-end gap-6">
-                            <a href="javascript:void(0)" class="text-default-500 font-medium">
+                            <a class="text-default-500 font-medium">
                                 Terms
                             </a>
-                            <a href="javascript:void(0)" class="text-default-500 font-medium">
+                            <a class="text-default-500 font-medium">
                                 Privacy
                             </a>
-                            <a href="javascript:void(0)" class="text-default-500 font-medium">
+                            <a class="text-default-500 font-medium">
                                 Cookies
                             </a>
                         </div>

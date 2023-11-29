@@ -17,7 +17,8 @@
                 </div>
 
                 <div class="absolute end-0 lg:-bottom-16 bottom-10">
-                    <img src="/assets/offer-popup-78034aee.svg" class="lg:w-auto w-20">
+                    <NuxtImg src="/assets/offer-popup-78034aee.svg" class="lg:w-auto w-20" placeholder loading="lazy"
+                        alt="Discount image" />
                 </div>
             </div>
         </div><!-- end container -->

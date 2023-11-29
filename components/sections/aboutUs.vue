@@ -6,7 +6,7 @@
                     class="flex items-center justify-center h-96 mt-32 align-middle place-content-center w-full bg-default-500/5 rounded-lg">
 
                     <NuxtImg provider="cloudinary" loading="lazy" placeholder
-                        class="h-full w-full object-cover object-center" src="/v1701161319/pizza1_lfrymw.jpg" />
+                        class="h-full w-full rounded-xl object-cover object-center" src="/v1701161319/pizza1_lfrymw.jpg" />
                 </div>
                 <div class="">
                     <span class="inline-flex py-2 px-4 text-sm text-primary rounded-full bg-primary/20 mb-6">About Us</span>
