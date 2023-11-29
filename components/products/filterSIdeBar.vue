@@ -25,9 +25,9 @@ const layout = useLayout();
 
                                                 <ProductsFiltersRange />
 
-                                                <ProductsFiltersFilter />
+                                                <!--ProductsFiltersFilter /-->
 
-                                                <ProductsFiltersTags />
+                                                <!--ProductsFiltersTags /-->
 
                                                 <div class="py-6">
                                                     <div
@@ -35,7 +35,11 @@ const layout = useLayout();
                                                         <div class="absolute inset-0 bg-primary/10 -z-10"></div>
                                                         <div class="p-12">
                                                             <div class="flex justify-center mb-6">
-                                                                <img src="/assets/filter-offer-dish-1d78b7ee.png">
+
+                                                                <NuxtImg quality="100" provider="cloudinary" placeholder
+                                                                    loading="lazy" src="/v1701161319/pizza1_lfrymw.jpg"
+                                                                    class="rounded-full" />
+
                                                             </div>
                                                             <div class="text-center mb-10">
                                                                 <h3 class="text-2xl font-medium text-default-900 mb-2">
@@ -53,18 +57,9 @@ const layout = useLayout();
                                                                     $59 USD
                                                                 </span>
                                                             </div>
-                                                            <button
-                                                                class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full bg-primary text-white hover:bg-primary-500 transition-all"
-                                                                type="button" fdprocessedid="cg6tx5">
-                                                                Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                    height="24" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="currentColor" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                                    data-lucide="move-right"
-                                                                    class="lucide lucide-move-right h-5 w-5">
-                                                                    <path d="M18 8L22 12L18 16"></path>
-                                                                    <path d="M2 12H22"></path>
-                                                                </svg></button>
+
+                                                            <VueButton name="Shop Now" type="button"
+                                                                className="py-2.5 px-8 w-full" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,18 +88,17 @@ const layout = useLayout();
 
             </div>
         </section>
-        <USlideover v-model="layout.showFilterSideBar" side="left"
+        <USlideover class="block lg:hidden" v-model="layout.showFilterSideBar" side="left"
             :ui="{ wrapper: 'mr-16', background: 'bg-white dark:bg-slate-900' }">
-            <div class="p-4 flex-1 ">
+            <div class="p-4 flex-1">
 
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
                         <div
                             class="flex justify-center items-center border-b border-dashed border-default-200 h-16 transition-all duration-300">
-                            <a href="home.html">
-                                <img src="/assets/logo-dark-6dbab3e1.png" alt="logo" class="h-10 flex dark:hidden">
-                                <img src="/assets/logo-light-35c89c2c.png" alt="logo" class="h-10 hidden dark:flex">
-                            </a>
+                            <NuxtLink to="/">
+                                <span class="h-10 text-primary text-2xl uppercase border-b">Foodina</span>
+                            </NuxtLink>
                         </div>
                     </h3>
                     <UButton color="gray" variant="outline" icon="i-heroicons-x-mark-20-solid" class="-my-1"
@@ -112,7 +106,7 @@ const layout = useLayout();
                 </div>
 
                 <div class="">
-                    <div class="h-[calc(100vh-128px)] overflow-y-auto lg:h-auto" data-simplebar="init">
+                    <div class="h-[calc(100vh-128px)] overflow-y-auto lg:h-auto">
                         <div class="h-full" style="margin: 0px;">
 
                             <div class="">
@@ -125,9 +119,9 @@ const layout = useLayout();
 
                                                 <ProductsFiltersRange />
 
-                                                <ProductsFiltersFilter />
+                                                <!--ProductsFiltersFilter /-->
 
-                                                <ProductsFiltersTags />
+                                                <!--ProductsFiltersTags /-->
 
                                                 <div class="py-6">
                                                     <div
