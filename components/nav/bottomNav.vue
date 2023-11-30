@@ -20,10 +20,10 @@
                     <Icon name="i-mdi-bookmark" active-class="text-primary" class="w-6 h-6" />
                     <span class="text-xs font-medium">Wishlist</span>
                 </NuxtLink>
-                <NuxtLink to="/contact" active-class="text-primary"
+                <NuxtLink to="/cart" active-class="text-primary"
                     class="flex flex-col items-center justify-center gap-1 text-default-600" type="button">
-                    <Icon name="i-mdi-phone" class="w-6 h-6" />
-                    <span class="text-xs font-medium">Contact</span>
+                    <Icon name="i-heroicons-shopping-cart-20-solid" class="w-6 h-6" />
+                    <span class="text-xs font-medium">Cart</span>
                 </NuxtLink>
             </div>
         </div>

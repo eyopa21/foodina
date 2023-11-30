@@ -87,9 +87,9 @@
 
                             <div class="border-t border-default-200 px-6 py-5">
                                 <div class="flex flex-wrap justify-between items-center gap-2">
-                                    <VueButton name="Return to Shop" mode="outline" type="button" />
+                                    <VueButton name="Return to Shop" mode="outline" type="button" className="py-3" />
 
-                                    <VueButton name="Update Cart" mode="outline" type="button" />
+                                    <VueButton name="Update Cart" mode="outline" type="button" className="py-3" />
                                 </div>
                             </div>
                         </div><!-- end grid-cols -->

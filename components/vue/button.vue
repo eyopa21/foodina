@@ -3,7 +3,7 @@
 
         <div v-if="props.mode == 'outline'">
             <button :type="props.type" :class="props.className"
-                class="inline-flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 text-center text-sm font-medium shadow-sm transition-all duration-500">
+                class="inline-flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white px-6  text-center text-sm font-medium shadow-sm transition-all duration-500">
                 {{ props.name }}
             </button>
         </div>
