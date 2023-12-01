@@ -62,15 +62,19 @@ const items = [
                                 <div class="flex flex-col md:flex-row md:items-center justify-center gap-4 relative">
                                     <div class="shrink-0">
                                         <div class="w-full h-full">
-                                            <img src="/assets/red-velvet-pastry-b09214ba.png" class="w-full h-full">
+
+
+                                            <NuxtImg quality="100" provider="cloudinary" placeholder loading="lazy"
+                                                src="/v1701161319/pizza1_lfrymw.jpg" class="w-full h-48" />
+
                                         </div>
                                     </div><!-- end shrink-0 -->
                                     <div class="flex-grow flex items-center gap-4">
                                         <div class="grow">
-                                            <div class="">
+                                            <div class="group">
                                                 <div class="flex items-center justify-between mb-4">
                                                     <NuxtLink :to="`/products/detail-${i.id}`"
-                                                        class="text-default-800 text-2xl font-semibold line-clamp-1 after:absolute after:inset-0">
+                                                        class="text-default-800 group-hover:text-primary text-2xl font-semibold line-clamp-1 after:absolute after:inset-0">
                                                         {{ i.name }}
                                                     </NuxtLink>
 
