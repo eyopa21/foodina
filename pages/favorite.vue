@@ -35,9 +35,19 @@
                     <div class="md:w-auto w-full lg:mt-0 mt-4">
                         <div class="flex lg:flex-col justify-between gap-2">
 
+                            <NuxtLink to="/cart">
+                                <button class="bg-primary p-2 px-4 rounded-full hover:underline text-xs text-white"
+                                    type="button">Add to
+                                    cart</button>
+                            </NuxtLink>
 
-                            <VueButton name="Add to cart" type="button" className="py-2" />
-                            <VueButton name="Add to cart" type="button" className="py-2" mode="outline" />
+                            <NuxtLink>
+                                <button
+                                    class="bg-white text-primary text-xs hover:underline border border-primary p-2 rounded-full text-black"
+                                    type="button">Remove</button>
+                            </NuxtLink>
+
+
                         </div>
                     </div>
                 </div>
