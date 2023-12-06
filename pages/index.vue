@@ -8,16 +8,22 @@
         <SectionsHero />
 
         <!-- About Us Section -->
-        <SectionsAboutUs />
+        <div>
+
+            <SectionsAboutUs />
+        </div>
 
         <!-- Menu Section -->
         <!--SectionsMenu /-->
 
         <!-- Testimonials Section -->
-        <SectionsTestimonials />
+        <!--SectionsTestimonials /-->
 
         <!-- Offer Section -->
-        <SectionsSpecialOffer />
+        <div class="mt-32">
+
+            <SectionsSpecialOffer />
+        </div>
 
         <!-- Download App Section -->
         <!--SectionsDownloadApp /-->
