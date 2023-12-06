@@ -1,5 +1,5 @@
 <template>
-    <footer class="border-t border-default-200">
+    <footer class="border-t border-default-200 max-w-full">
         <div class="container">
             <div class="grid lg:grid-cols-3 items-center gap-6 lg:py-10 py-6">
                 <div class="lg:col-span-2">
@@ -56,13 +56,14 @@
 
                         <div class="flex flex-col gap-3">
                             <h5 class="mb-3 font-semibold text-default-950">Get in touch</h5>
-                            <div class="text-default-600 hover:underline"><a href="tel:0918784596">(+251) 918784596</a>
+                            <div class="text-default-600 hover:underline truncate"><a href="tel:0918784596">(+251)
+                                    918784596</a>
                             </div>
-                            <div class="text-default-600 hover:underline"><a
+                            <div class="text-default-600 hover:underline truncate"><a
                                     href="mailto:jobtennis21@gmail.com">jobtennis21@mail.com</a>
                             </div>
                             <div class="flex items-center gap-4">
-                                <a v-for="i in 4" :key="i" href="#!" class="cursor-pointer">
+                                <a v-for="i in 3" :key="i" href="#!" class="cursor-pointer">
 
                                     <Icon name="i-heroicons-arrow-right-20-solid"
                                         class="h-6 w-6 transition-all text-default-600 hover:text-primary"></Icon>
