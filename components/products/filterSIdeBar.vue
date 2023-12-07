@@ -1,3 +1,4 @@
+
 <script setup>
 const layout = useLayout();
 </script>
@@ -88,8 +89,8 @@ const layout = useLayout();
 
             </div>
         </section>
-        <USlideover class="block lg:hidden" v-model="layout.showFilterSideBar" side="left"
-            :ui="{ wrapper: 'mr-16', background: 'bg-white dark:bg-slate-900' }">
+        <USlideover class="block lg:hidden " v-model="layout.showFilterSideBar" side="left"
+            :ui="{ wrapper: 'mr-16 ', background: 'min-h-screen bg-white dark:bg-slate-900' }">
             <div class="p-4 flex-1">
 
                 <div class="flex items-center justify-between">
@@ -106,7 +107,7 @@ const layout = useLayout();
                 </div>
 
                 <div class="">
-                    <div class="h-[calc(100vh-128px)] overflow-y-auto lg:h-auto">
+                    <div class="h-[calc(100vh-150px)] overflow-y-auto lg:h-auto">
                         <div class="h-full" style="margin: 0px;">
 
                             <div class="">
@@ -167,20 +168,18 @@ const layout = useLayout();
                                     </div>
                                 </div>
                             </div>
-                            <div class="simplebar-placeholder" style="width: 242px; height: 2307px;"></div>
+
                         </div>
-                        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                            <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-                        </div>
-                        <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                            <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
-                        </div>
+
+                    </div>
+                    <div class="flex flex-row space-x-2 lg:hidden py-2 px-4 border-t border-default-200">
+
+                        <a class="w-full inline-flex items-center justify-center rounded border border-primary  px-6 py-1 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
+                            href="javascript:void(0)">Reset</a>
+                        <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-1.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
+                            href="javascript:void(0)">Search</a>
                     </div>
 
-                    <div class="block lg:hidden py-4 px-4 border-t border-default-200">
-                        <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
-                            href="javascript:void(0)">Reset</a>
-                    </div>
                 </div>
             </div>
         </USlideover>
