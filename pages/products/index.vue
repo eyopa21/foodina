@@ -84,7 +84,7 @@ const items = [
                                                 <p class="text-base text-default-600 max-w-2xl line-clamp-2 mb-6">Lorem
                                                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                                     tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                                    incididunt ut magna aliqua. Ut enim ad minim veniam
                                                 </p>
                                                 <div class="flex flex-wrap md:flex-nowrap items-center gap-4 mb-6">
                                                     <button>
