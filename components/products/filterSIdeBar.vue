@@ -1,6 +1,14 @@
 
 <script setup>
 const layout = useLayout();
+const categories = ref(null)
+const range = ref({
+    min: null,
+    max: null
+})
+const search = () => {
+    console.log("search")
+}
 </script>
 
 <template>
@@ -22,7 +30,8 @@ const layout = useLayout();
                                         aria-label="scrollable content" style="height: auto; overflow: hidden;">
                                         <div class="simplebar-content" style="padding: 0px;">
                                             <div class="p-6 lg:p-0 divide-y divide-default-200">
-                                                <ProductsFiltersCategory />
+                                                <ProductsFiltersCategory @category="(a) => console.log(' A', a)" />
+
 
                                                 <ProductsFiltersRange />
 
@@ -116,7 +125,8 @@ const layout = useLayout();
                                         style="height: auto; overflow: hidden;">
                                         <div class="simplebar-content" style="padding: 0px;">
                                             <div class="p-6 lg:p-0 divide-y divide-default-200">
-                                                <ProductsFiltersCategory />
+                                                <ProductsFiltersCategory @category="(a) => categories = a.value" />
+
 
                                                 <ProductsFiltersRange />
 
@@ -177,7 +187,7 @@ const layout = useLayout();
                         <a class="w-full inline-flex items-center justify-center rounded border border-primary  px-6 py-1 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
                             href="javascript:void(0)">Reset</a>
                         <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-1.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
-                            href="javascript:void(0)">Search</a>
+                            @click="search()">Search</a>
                     </div>
 
                 </div>
