@@ -128,7 +128,8 @@ const search = () => {
                                                 <ProductsFiltersCategory @category="(a) => categories = a.value" />
 
 
-                                                <ProductsFiltersRange />
+                                                <ProductsFiltersRange
+                                                    @range="(min, max) => { range.min = min; range.max = max }" />
 
                                                 <!--ProductsFiltersFilter /-->
 

@@ -1,8 +1,11 @@
 
 <script setup>
-
+const emit = defineEmits(['range'])
 const minValue = ref(100)
 const maxValue = ref(999)
+
+emit('range', minValue, maxValue)
+
 </script>
 <template>
     <div>
