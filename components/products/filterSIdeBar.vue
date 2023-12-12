@@ -7,7 +7,7 @@ const range = ref({
     max: null
 })
 const search = () => {
-    console.log("search")
+    console.log("search", range.value, categories.value)
 }
 </script>
 
@@ -30,10 +30,11 @@ const search = () => {
                                         aria-label="scrollable content" style="height: auto; overflow: hidden;">
                                         <div class="simplebar-content" style="padding: 0px;">
                                             <div class="p-6 lg:p-0 divide-y divide-default-200">
-                                                <ProductsFiltersCategory @category="(a) => console.log(' A', a)" />
+                                                <ProductsFiltersCategory @category="(a) => categories = a.value" />
 
 
-                                                <ProductsFiltersRange />
+                                                <ProductsFiltersRange
+                                                    @range="(min, max) => { range.min = min; range.max = max }" />
 
                                                 <!--ProductsFiltersFilter /-->
 
@@ -73,25 +74,27 @@ const search = () => {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div
+                                                    class="hidden lg:flex flex-row space-x-2  py-2 px-4 border-t border-default-200">
+
+                                                    <a
+                                                        class="w-full inline-flex items-center justify-center rounded border border-primary  px-6 py-1 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50">Reset</a>
+                                                    <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-1.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
+                                                        @click="search()">Search</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="simplebar-placeholder" style="width: 242px; height: 2307px;"></div>
+
                         </div>
-                        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                            <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-                        </div>
-                        <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                            <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
-                        </div>
+
+
                     </div>
 
-                    <div class="block lg:hidden py-4 px-4 border-t border-default-200">
-                        <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
-                            href="javascript:void(0)">Reset</a>
-                    </div>
+
                 </div>
 
 
@@ -185,8 +188,8 @@ const search = () => {
                     </div>
                     <div class="flex flex-row space-x-2 lg:hidden py-2 px-4 border-t border-default-200">
 
-                        <a class="w-full inline-flex items-center justify-center rounded border border-primary  px-6 py-1 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
-                            href="javascript:void(0)">Reset</a>
+                        <a
+                            class="w-full inline-flex items-center justify-center rounded border border-primary  px-6 py-1 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50">Reset</a>
                         <a class="w-full inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-1.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary focus:ring focus:ring-primary/50"
                             @click="search()">Search</a>
                     </div>

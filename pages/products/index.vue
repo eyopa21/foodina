@@ -65,7 +65,7 @@ const items = [
 
 
                                             <NuxtImg quality="100" provider="cloudinary" placeholder loading="lazy"
-                                                src="/v1701161319/pizza1_lfrymw.jpg" class="w-full h-48" />
+                                                src="/v1701161319/pizza1_lfrymw.jpg" alt="food image" class="w-full h-48" />
 
                                         </div>
                                     </div><!-- end shrink-0 -->
@@ -73,7 +73,8 @@ const items = [
                                         <div class="grow">
                                             <div class="group">
                                                 <div class="flex items-center justify-between mb-4">
-                                                    <NuxtLink :to="`/products/detail-${i.id}`"
+                                                    <NuxtLink @click="mainData.foodDetail = i"
+                                                        :to="`/products/detail-${i.id}`"
                                                         class="text-default-800 group-hover:text-primary text-2xl font-semibold line-clamp-1 after:absolute after:inset-0">
                                                         {{ i.name }}
                                                     </NuxtLink>

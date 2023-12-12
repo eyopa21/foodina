@@ -7,7 +7,7 @@
         </button>
         <div class="hs-collapse w-full overflow-hidden transition-[height] duration-300 open" id="all_categories">
             <div class="relative flex flex-col space-y-4 mb-6 pl-1">
-                {{ categories }}
+
                 <VueRadio @value="addCategory('all')" @remove="remove('all')" name="all" label="All" />
                 <VueRadio @value="addCategory('burger')" @remove="remove('burger')" name="burger" label="Burgers" />
                 <VueRadio @value="addCategory('pasta')" @remove="remove('pasta')" name="pasta" label="Pastas" />

@@ -1,3 +1,8 @@
+<script setup>
+const cart = useData().value.cart
+</script>
+
+
 <template>
     <div>
 
@@ -32,8 +37,9 @@
                                                             Sub-Total</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="divide-y divide-default-200">
-                                                    <tr v-for="i in 4" :key="i">
+                                                <tbody v-if="cart.length" class="divide-y divide-default-200">
+
+                                                    <tr v-for="i in cart" :key="i">
                                                         <td class="px-5 py-3 whitespace-nowrap">
                                                             <div class="flex items-center gap-2">
                                                                 <button fdprocessedid="t3bs79"><svg
@@ -79,6 +85,10 @@
 
 
                                                 </tbody>
+                                                <tbody v-else>
+                                                    <div class="py-8 flex justify-center text-3xl mx-auto">Nothing here for
+                                                        now</div>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -87,7 +97,10 @@
 
                             <div class="border-t border-default-200 px-6 py-5">
                                 <div class="flex flex-wrap justify-between items-center gap-2">
-                                    <VueButton name="Return to Shop" mode="outline" type="button" className="py-3" />
+                                    <NuxtLink to="/products">
+
+                                        <VueButton name="Return to Shop" mode="outline" type="button" className="py-3" />
+                                    </NuxtLink>
 
                                     <VueButton name="Update Cart" mode="outline" type="button" className="py-3" />
                                 </div>

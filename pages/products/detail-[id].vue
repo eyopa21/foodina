@@ -1,8 +1,37 @@
+<script setup>
+const route = useRoute();
+const mainData = useData();
+
+const toast = useToast()
+
+const theFood = mainData.value.foods.filter(food => {
+    return food.id == route.params.id;
+})
+
+
+
+
+
+const addToCart = () => {
+    mainData.value.cart.push(mainData.value.foodDetail)
+    toast.add({
+        id: 'addedToCart',
+        title: 'Success',
+        description: 'Product added to cart successfully',
+        icon: 'i-heroicons-check-badge',
+        color: 'green',
+        timeout: 5000,
+
+    })
+}
+</script>
+
 <template>
     <section class="">
         <VueBreadCrumb />
+        {{ theFood }}
         <div class="container">
-            <div class="grid lg:grid-cols-2 gap-6">
+            <div v-if="theFood[0]" class="grid lg:grid-cols-2 gap-6">
                 <div class="grid grid-cols-1">
                     <div>
                         <div
@@ -118,7 +147,7 @@
                                 class="plus flex-shrink-0 bg-default-200 text-default-800 rounded-full h-9 w-9 text-sm inline-flex items-center justify-center">+</button>
                         </div>
 
-                        <VueButton name="Buy now" type="button" className="py-3" />
+                        <VueButton @click="addToCart()" name="Add to cart" type="button" className="py-3" />
 
                         <Icon name="i-heroicons-heart-20-solid"
                             class="lucide lucide-heart h-10 w-10 text-default-400 cursor-pointer hover:fill-red-600 hover:text-red-600 focus:fill-red-600 focus:text-red-600" />
@@ -157,8 +186,11 @@
                             People are viewing this right now</h5>
                     </div>
                 </div>
-            </div><!-- end grid -->
-        </div><!-- end container -->
+            </div>
+            <div v-else class="flex justify-center py-16 text-3xl text-primary">
+                No such product
+            </div>
+        </div>
     </section>
     <section class="lg:py-10 py-6">
         <div class="container">
@@ -215,10 +247,12 @@
                 </div><!-- end grid-cols -->
 
             </div><!-- end grid -->
+            <div v-if="theFood[0]">
 
-            <ProductsRating />
+                <ProductsRating />
+                <ProductsComments />
+            </div>
 
-            <ProductsComments />
         </div>
     </section>
 </template>

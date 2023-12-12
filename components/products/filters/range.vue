@@ -51,6 +51,9 @@ emit('range', minValue, maxValue)
                     <VueRadio name="100-300" label="100ETB - 300ETB" />
                     <VueRadio name="300-500" label="300ETB - 500ETB " />
                     <VueRadio name="500" label="Above 500" />
+                    <VueRadio name="all" label="All" />
+
+
                 </div>
             </div>
         </div>

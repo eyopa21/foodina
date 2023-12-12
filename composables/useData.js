@@ -49,6 +49,8 @@ export default function () {
           amount: 0
         },
       ],
+      foodDetail: '',
+      cart: []
     };
   });
 }
