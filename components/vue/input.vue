@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full">
+    <div class="w-full space-y-1">
         <label :for="props.name" class="text-md font-medium text-default-950 mb-4" :class="props.className">{{ props.label
         }}</label>
 
@@ -28,6 +28,10 @@ const props = defineProps({
     placeholder: {
         type: String,
         required: true
+    },
+    className: {
+        type: String,
+        required: false
     }
 })
 </script>
