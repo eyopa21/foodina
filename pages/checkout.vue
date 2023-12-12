@@ -1,5 +1,5 @@
 <template>
-    <VueBreadCrumb />
+    <VueBreadCrumb :name="[{ name: 'Checkout', to: '/checkout', active: true }]" />
     <section class="lg:py-10 py-6">
         <div class="container">
             <div class="grid lg:grid-cols-3 grid-cols-1 gap-6">
@@ -8,19 +8,13 @@
                         <h4 class="text-lg font-medium text-default-800 mb-6">Billing Information</h4>
 
                         <div class="grid lg:grid-cols-4 gap-6">
-                            <div>
-                                <label for="userName" class="block text-sm text-default-700 mb-2">User name</label>
-                                <input id="userName"
-                                    class="block w-full bg-transparent dark:bg-default-50 rounded-full py-2.5 px-4 border border-default-200"
-                                    type="text" placeholder="First Name" fdprocessedid="1ib329">
+                            <div class="lg:col-span-2">
+
+                                <VueInput name="fullname" label="Full name" type="text" placeholder="Your Full here..."
+                                    className="!text-xs " />
                             </div>
 
-                            <div>
-                                <label for="userName" class="block text-sm text-default-700 mb-2">&nbsp;</label>
-                                <input id="userName"
-                                    class="block w-full bg-transparent dark:bg-default-50 rounded-full py-2.5 px-4 border border-default-200"
-                                    type="text" placeholder="Last name" fdprocessedid="dmwdgk">
-                            </div>
+
 
                             <div class="lg:col-span-2">
                                 <label for="userName" class="block text-sm text-default-700 mb-2">Company Name <span

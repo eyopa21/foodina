@@ -28,8 +28,10 @@
                     </div>
                 </div>
 
+                <NuxtLink to="checkout">
 
-                <VueButton name="Proceed to checkout" type="button" className="w-full py-3 text-center items-center" />
+                    <VueButton name="Proceed to checkout" type="button" className="w-full py-3 text-center items-center" />
+                </NuxtLink>
             </div>
 
             <div class="border border-default-200 rounded-lg">

@@ -20,7 +20,7 @@ const items = [
 
 <template>
     <div class="">
-        <VueBreadCrumb />
+        <VueBreadCrumb :name="[{ name: 'products', to: '/products' }]" />
         <section class="py-10">
             <div class="container">
                 <div class="lg:flex gap-6">

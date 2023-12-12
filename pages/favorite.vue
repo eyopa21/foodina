@@ -1,6 +1,6 @@
 <template>
     <section class="lg:py-10 py-6">
-        <VueBreadCrumb />
+        <VueBreadCrumb :name="[{ name: 'favorite', to: '/favorite', active: true }]" />
         <div class="container pt-4">
             <div class="border border-default-200 divide-y divide-default-200 rounded-lg overflow-hidden ">
                 <div v-for="i in 4" :key="i" class="px-4 py-4 flex flex-wrap justify-between items-center">

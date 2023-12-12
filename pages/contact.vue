@@ -1,8 +1,8 @@
 <template>
     <div class="">
 
+        <VueBreadCrumb :name="[{ name: 'contact', to: '/contact', active: true }]" />
         <section class="lg:py-16 py-6">
-            <VueBreadCrumb />
             <div class="container ">
                 <div class="grid lg:grid-cols-5 gap-10">
                     <div class="lg:col-span-2">

@@ -1,6 +1,7 @@
 <template>
     <div class="w-full">
-        <label :for="props.name" class="text-md font-medium text-default-950 mb-4">{{ props.label }}</label>
+        <label :for="props.name" class="text-md font-medium text-default-950 mb-4" :class="props.className">{{ props.label
+        }}</label>
 
         <input :type="props.type" :name="props.name"
             class="py-3 px-4 block w-full bg-white border-default-300  rounded-lg text-sm dark:bg-default-50"

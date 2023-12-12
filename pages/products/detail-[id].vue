@@ -28,7 +28,8 @@ const addToCart = () => {
 
 <template>
     <section class="">
-        <VueBreadCrumb />
+        <VueBreadCrumb
+            :name="[{ name: 'products', to: '/products' }, { name: 'product-detail', to: `/products/detail-${route.params.id}`, active: true }]" />
         {{ theFood }}
         <div class="container">
             <div v-if="theFood[0]" class="grid lg:grid-cols-2 gap-6">
